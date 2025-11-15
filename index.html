@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Sample HTML Page</title>
 </head>
 <body>
-    <h1>Welcome to My Sample Page</h1>
-    <p>This is a simple HTML page.</p>
+    <div class="container">
+        <h1>Welcome to My Sample Page</h1>
+        <p>This is a simple HTML page with enhanced styling and interactivity.</p>
+        <p>Click the button below to see a fun message!</p>
+        <button onclick="showMessage()">Click Me!</button>
+        <div id="output" class="message"></div>
+    </div>
+    
+    <script>
+        function showMessage() {
+            const messages = [
+                "¡Hola! 👋",
+                "¡Excelente! 🎉",
+                "¡Genial! ✨",
+                "¡Increíble! 🚀",
+                "¡Fantástico! 🌟"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('output').textContent = randomMessage;
+        }
+    </script>
 </body>
 </html>
